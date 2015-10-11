@@ -3,3 +3,4 @@ bootstrap.*
 build
 ext
 **/sass/example
+*.log

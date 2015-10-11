@@ -54,7 +54,7 @@
      */
     
     
-    "theme": "theme-triton",
+    "theme": "theme-crisp",
     
     
     /**
@@ -313,7 +313,7 @@
     "production": {
         "output": {
             "appCache": {
-                "enable": true,
+                "enable": false,
                 "path": "cache.appcache"
             }
         },
@@ -552,7 +552,16 @@
      *     }
      *
      */
-    
+
+
+    "builds": {
+        "classic": {
+            "toolkit": "classic",
+            "theme": "theme-crisp"
+        }
+    },
+
+    "slicer": null,
 
     /**
      * Uniquely generated id for this application, used as prefix for localStorage keys.
