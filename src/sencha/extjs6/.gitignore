@@ -2,3 +2,4 @@
 bootstrap.*
 build
 ext
+**/sass/example
