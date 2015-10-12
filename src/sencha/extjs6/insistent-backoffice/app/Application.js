@@ -5,6 +5,9 @@
  */
 Ext.define('InsistentBackoffice.Application', {
     extend: 'Ext.app.Application',
+    reqiures: [
+        'InsistentUtils.WorkflowHelper'
+    ],
     
     name: 'InsistentBackoffice',
 
@@ -14,6 +17,9 @@ Ext.define('InsistentBackoffice.Application', {
     
     launch: function () {
         // TODO - Launch the application
+        var x = Workflow.isEmpty(null);
+
+        console.log('Packages works?', x);
     },
 
     onAppUpdate: function () {

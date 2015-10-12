@@ -16,7 +16,7 @@
       * As a general rule, all classes that belong to this package should be under this namespace
       * if multiple namespaces are part of this package, set this to "".
       */
-     "namespace": "Insistent.utils",
+     "namespace": "InsistentUtils",
 
     /**
      * The package type.
@@ -44,12 +44,12 @@
       * Required only if you are distributing this package through a Sencha Cmd repository,
       * in which case it should match the name you assign to your local package repository.
       */
-    "creator": "anonymous",
+    "creator": "Oleg Taranenko",
 
     /**
      * A summarized description of this package.
      */
-    "summary": "Short summary",
+    "summary": "Some useful utility classes are ported initially from the PocketPAM and other projects",
 
     /**
      * A detailed description of this package.
@@ -81,14 +81,7 @@
     /**
      * Additional resources used during theme slicing operations
      */
-    "slicer": {
-        "js": [
-            {
-                "path": "${package.dir}/sass/example/custom.js",
-                "isWidgetManifest": true
-            }
-        ]
-    },
+    "slicer": null,
 
     /**
      * Controls the output directory.
@@ -114,15 +107,15 @@
     "sass" : {
         /**
          * The namespace to which this package's SASS corresponds. The default value of
-         * "Insistent.utils" means that the files in ./sass/src (and ./sass/var) match classes in
-         * the Insistent.utils" root namespace. In other words, "Insistent.utils.panel.Panel" maps to
+         * "InsistentUtils" means that the files in ./sass/src (and ./sass/var) match classes in
+         * the InsistentUtils" root namespace. In other words, "InsistentUtils.panel.Panel" maps to
          * ./sass/src/panel/Panel.scss.
          *
          * To style classes from any namespace, set this to blank. If this is blank,
-         * then to style "Insistent.utils.panel.Panel" you would put SASS in
-         * ./sass/src/Insistent.utils/panel/Panel.scss.
+         * then to style "InsistentUtils.panel.Panel" you would put SASS in
+         * ./sass/src/InsistentUtils/panel/Panel.scss.
          */
-        "namespace": "Insistent.utils",
+        "namespace": "InsistentUtils",
 
         /**
          * Comma-separated list of files or folders containing extra Sass. These
