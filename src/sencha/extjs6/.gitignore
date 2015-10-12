@@ -1,6 +1,9 @@
+**/sass/example
+*.log
 .architect
 bootstrap.*
 build
+classic.json
 ext
-**/sass/example
-*.log
+insistent-backoffice-bak
+modern.json

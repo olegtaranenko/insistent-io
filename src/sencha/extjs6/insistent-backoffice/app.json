@@ -46,16 +46,10 @@
      * The toolkit to use. Select either "classic" or "modern".
      */
     
-    "toolkit": "classic",
-    
     
     /**
      * The name of the theme for this application.
      */
-    
-    
-    "theme": "theme-crisp",
-    
     
     /**
      * The list of required packages (with optional versions; default is "latest").
@@ -104,8 +98,6 @@
          *
          */
          
-        // "save": "sass/save.scss",
-        
         /**
          * Comma-separated list of files or folders containing extra Sass. These
          * files are automatically included in the Sass compilation. By default this
@@ -299,7 +291,7 @@
          //   - other: a string (such as the build.timestamp shown here) to allow
          //     requests to be cached for this build.
          //
-         "cache": true,
+         "cache": false,
 
          // When "cache" is not true, this value is the request parameter used
          // to control caching.
@@ -313,7 +305,7 @@
     "production": {
         "output": {
             "appCache": {
-                "enable": false,
+                "enable": true,
                 "path": "cache.appcache"
             }
         },
@@ -377,6 +369,8 @@
     "bootstrap": {
         "base": "${app.dir}",
         
+        "manifest": "${build.id}.json",
+        
         "microloader": "bootstrap.js",
         "css": "bootstrap.css"
     },
@@ -424,8 +418,15 @@
     
     "output": {
         "base": "${workspace.build.dir}/${build.environment}/${app.name}",
+        "page": "index.html",
+        "manifest": "${build.id}.json",
+        "js": "${build.id}/app.js",
         "appCache": {
             "enable": false
+        },
+        "resources": {
+            "path": "${build.id}/resources",
+            "shared": "resources"
         }
     },
     
@@ -448,7 +449,7 @@
     
     "cache": {
         "enable": false,
-        "deltas": true
+        "deltas": "${build.id}/deltas"
     },
     
 
@@ -506,7 +507,7 @@
      * deltas between updates.
      */
     
-    "archivePath": "archive",
+    "archivePath": "archive/${build.id}",
     
 
 
@@ -552,20 +553,33 @@
      *     }
      *
      */
-
-
+    
     "builds": {
         "classic": {
             "toolkit": "classic",
-            "theme": "theme-crisp"
+            
+            "theme": "theme-triton",
+            
+            "sass": {
+                // "save": "classic/sass/save.scss"
+            }
+        },
+
+        "modern": {
+            "toolkit": "modern",
+            
+            "theme": "theme-triton",
+            
+            "sass": {
+                // "save": "modern/sass/save.scss"
+            }
         }
     },
-
-    "slicer": null,
+    
 
     /**
      * Uniquely generated id for this application, used as prefix for localStorage keys.
      * Normally you should never change this value.
      */
-    "id": "22b73057-240c-4577-89ed-7cb6445e9949"
+    "id": "f6049570-d1ef-405f-a46d-8fa07fb88620"
 }
